@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE470A112949CB0A006843C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A102949CB0A006843C7 /* AppDelegate.m */; };
+		CE470A142949CB0A006843C7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A132949CB0A006843C7 /* SceneDelegate.m */; };
+		CE470A172949CB0A006843C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A162949CB0A006843C7 /* ViewController.m */; };
+		CE470A1A2949CB0A006843C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE470A182949CB0A006843C7 /* Main.storyboard */; };
+		CE470A1C2949CB0C006843C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE470A1B2949CB0C006843C7 /* Assets.xcassets */; };
+		CE470A1F2949CB0C006843C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE470A1D2949CB0C006843C7 /* LaunchScreen.storyboard */; };
+		CE470A222949CB0C006843C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A212949CB0C006843C7 /* main.m */; };
+		CE470A2B2949DCD9006843C7 /* LiveContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A292949DC35006843C7 /* LiveContentController.m */; };
+		DC56821EAD2BB3C7F122BB0C /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FCFD8D474D2EB3A56E746A /* Pods_SmartLib_iOS_Sample_App.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00FCFD8D474D2EB3A56E746A /* Pods_SmartLib_iOS_Sample_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLib_iOS_Sample_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0789F67786949E91305EC955 /* Pods-SmartLib iOS Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.release.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.release.xcconfig"; sourceTree = "<group>"; };
+		144BC935A4A4CFE84EF1AA33 /* Pods-SmartLib iOS Sample App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.debug.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.debug.xcconfig"; sourceTree = "<group>"; };
+		CE470A0C2949CB0A006843C7 /* SmartLib iOS Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartLib iOS Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE470A0F2949CB0A006843C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE470A102949CB0A006843C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE470A122949CB0A006843C7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		CE470A132949CB0A006843C7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		CE470A152949CB0A006843C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE470A162949CB0A006843C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE470A192949CB0A006843C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE470A1B2949CB0C006843C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE470A1E2949CB0C006843C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE470A202949CB0C006843C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE470A212949CB0C006843C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE470A282949DC35006843C7 /* LiveContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveContentController.h; sourceTree = "<group>"; };
+		CE470A292949DC35006843C7 /* LiveContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveContentController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE470A092949CB0A006843C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC56821EAD2BB3C7F122BB0C /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09CE60E4C17FB6772E1CABFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00FCFD8D474D2EB3A56E746A /* Pods_SmartLib_iOS_Sample_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34F1C5748D85EB575A37DCA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				144BC935A4A4CFE84EF1AA33 /* Pods-SmartLib iOS Sample App.debug.xcconfig */,
+				0789F67786949E91305EC955 /* Pods-SmartLib iOS Sample App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE470A032949CB0A006843C7 = {
+			isa = PBXGroup;
+			children = (
+				CE470A0E2949CB0A006843C7 /* SmartLib iOS Sample App */,
+				CE470A0D2949CB0A006843C7 /* Products */,
+				34F1C5748D85EB575A37DCA5 /* Pods */,
+				09CE60E4C17FB6772E1CABFD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE470A0D2949CB0A006843C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE470A0C2949CB0A006843C7 /* SmartLib iOS Sample App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE470A0E2949CB0A006843C7 /* SmartLib iOS Sample App */ = {
+			isa = PBXGroup;
+			children = (
+				CE470A0F2949CB0A006843C7 /* AppDelegate.h */,
+				CE470A102949CB0A006843C7 /* AppDelegate.m */,
+				CE470A122949CB0A006843C7 /* SceneDelegate.h */,
+				CE470A132949CB0A006843C7 /* SceneDelegate.m */,
+				CE470A152949CB0A006843C7 /* ViewController.h */,
+				CE470A162949CB0A006843C7 /* ViewController.m */,
+				CE470A292949DC35006843C7 /* LiveContentController.m */,
+				CE470A282949DC35006843C7 /* LiveContentController.h */,
+				CE470A182949CB0A006843C7 /* Main.storyboard */,
+				CE470A1B2949CB0C006843C7 /* Assets.xcassets */,
+				CE470A1D2949CB0C006843C7 /* LaunchScreen.storyboard */,
+				CE470A202949CB0C006843C7 /* Info.plist */,
+				CE470A212949CB0C006843C7 /* main.m */,
+			);
+			path = "SmartLib iOS Sample App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE470A0B2949CB0A006843C7 /* SmartLib iOS Sample App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE470A252949CB0C006843C7 /* Build configuration list for PBXNativeTarget "SmartLib iOS Sample App" */;
+			buildPhases = (
+				D473C68683BE71401DCF0C10 /* [CP] Check Pods Manifest.lock */,
+				CE470A082949CB0A006843C7 /* Sources */,
+				CE470A092949CB0A006843C7 /* Frameworks */,
+				CE470A0A2949CB0A006843C7 /* Resources */,
+				5ECBDD554F3AA4F3574C2A0B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmartLib iOS Sample App";
+			productName = "SmartLib iOS Sample App";
+			productReference = CE470A0C2949CB0A006843C7 /* SmartLib iOS Sample App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE470A042949CB0A006843C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CE470A0B2949CB0A006843C7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CE470A072949CB0A006843C7 /* Build configuration list for PBXProject "SmartLib iOS Sample App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE470A032949CB0A006843C7;
+			productRefGroup = CE470A0D2949CB0A006843C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE470A0B2949CB0A006843C7 /* SmartLib iOS Sample App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE470A0A2949CB0A006843C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE470A1F2949CB0C006843C7 /* LaunchScreen.storyboard in Resources */,
+				CE470A1C2949CB0C006843C7 /* Assets.xcassets in Resources */,
+				CE470A1A2949CB0A006843C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5ECBDD554F3AA4F3574C2A0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D473C68683BE71401DCF0C10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartLib iOS Sample App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE470A082949CB0A006843C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE470A172949CB0A006843C7 /* ViewController.m in Sources */,
+				CE470A112949CB0A006843C7 /* AppDelegate.m in Sources */,
+				CE470A2B2949DCD9006843C7 /* LiveContentController.m in Sources */,
+				CE470A222949CB0C006843C7 /* main.m in Sources */,
+				CE470A142949CB0A006843C7 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE470A182949CB0A006843C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE470A192949CB0A006843C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE470A1D2949CB0C006843C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE470A1E2949CB0C006843C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE470A232949CB0C006843C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE470A242949CB0C006843C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE470A262949CB0C006843C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 144BC935A4A4CFE84EF1AA33 /* Pods-SmartLib iOS Sample App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XP274DQ9A3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SmartLib iOS Sample App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.broadpeak.smartlib.demo.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE470A272949CB0C006843C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0789F67786949E91305EC955 /* Pods-SmartLib iOS Sample App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XP274DQ9A3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SmartLib iOS Sample App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.broadpeak.smartlib.demo.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE470A072949CB0A006843C7 /* Build configuration list for PBXProject "SmartLib iOS Sample App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE470A232949CB0C006843C7 /* Debug */,
+				CE470A242949CB0C006843C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE470A252949CB0C006843C7 /* Build configuration list for PBXNativeTarget "SmartLib iOS Sample App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE470A262949CB0C006843C7 /* Debug */,
+				CE470A272949CB0C006843C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE470A042949CB0A006843C7 /* Project object */;
+}
