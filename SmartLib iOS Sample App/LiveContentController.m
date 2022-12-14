@@ -5,9 +5,11 @@
 //  Created by Pierre-Olivier on 14/12/2022.
 //
 
+@import SmartLib;
+
 #import "LiveContentController.h"
 
-@import SmartLib;
+static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContext;
 
 @interface LiveContentController ()
 
@@ -41,6 +43,11 @@
                 [player replaceCurrentItemWithPlayerItem:[self playerItemFromURL:[result getURL]]];
                 self.player = player;
                 
+                [self.player.currentItem addObserver:self
+                                          forKeyPath:@"status"
+                                             options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
+                                             context:PlaybackStatusObservationContext];
+                
                 // Start the playback
                 [self.player play];
             } else {
@@ -56,6 +63,9 @@
     // Stop the session when closing the UI
     if (self.session != nil) {
         [self.player pause];
+        
+        [self.player.currentItem removeObserver:self
+                                     forKeyPath:@"status"];
     
         [self.session stopStreamingSession];
         [self.player replaceCurrentItemWithPlayerItem:nil];
@@ -70,6 +80,25 @@
     AVPlayerItem *itemToPlay = [AVPlayerItem playerItemWithAsset: assetUrl];
     
     return itemToPlay;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    // On non-recoverable error, stop the current session
+    if ([keyPath isEqualToString:@"status"]) {
+        AVPlayerItemStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
+        if (status == AVPlayerStatusFailed) {
+            [self.session stopStreamingSession];
+        }
+    } else {
+            [super observeValueForKeyPath: keyPath
+                                 ofObject: object
+                                   change: change
+                                  context: context];
+    }
+    
 }
 
 @end
