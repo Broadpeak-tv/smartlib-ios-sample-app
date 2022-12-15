@@ -7,6 +7,8 @@ Find all detailed steps on https://delivery-platform.broadpeak.tv/smartlib/
 ## Getting Started
 
 In the sample app folder, run `pod install`. All dependencies should be downloaded automatically.
+- ViewController.m: SmartLib initialization, executed once when the app is starting
+- LiveContentController.m: Start a live content with player analytics
 
 ## Live content
 
