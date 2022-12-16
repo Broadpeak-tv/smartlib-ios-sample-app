@@ -35,7 +35,7 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     // Run getURL in a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         // Start the session and retrieve the streaming URL
-        StreamingSessionResult *result = [self.session getURL:@"https://pf6.broadpeak-vcdn.com/bpk-vod/VOD/default/Broadtatou/index.m3u8"];
+        StreamingSessionResult *result = [self.session getURL:@"https://pf6.broadpeak-vcdn.com/bpk-tv/Arte/default/index.m3u8"];
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             if (![result isError]) {
