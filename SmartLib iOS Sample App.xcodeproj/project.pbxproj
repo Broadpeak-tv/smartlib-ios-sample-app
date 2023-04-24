@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CE7BDADFA4545E830B58DA9 /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4A5A8C81648EE254C5F6A8 /* Pods_SmartLib_iOS_Sample_App.framework */; };
 		CE470A112949CB0A006843C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A102949CB0A006843C7 /* AppDelegate.m */; };
 		CE470A142949CB0A006843C7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A132949CB0A006843C7 /* SceneDelegate.m */; };
 		CE470A172949CB0A006843C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A162949CB0A006843C7 /* ViewController.m */; };
@@ -15,13 +16,13 @@
 		CE470A1F2949CB0C006843C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE470A1D2949CB0C006843C7 /* LaunchScreen.storyboard */; };
 		CE470A222949CB0C006843C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A212949CB0C006843C7 /* main.m */; };
 		CE470A2B2949DCD9006843C7 /* LiveContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A292949DC35006843C7 /* LiveContentController.m */; };
-		DC56821EAD2BB3C7F122BB0C /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FCFD8D474D2EB3A56E746A /* Pods_SmartLib_iOS_Sample_App.framework */; };
+		CEDAB38F295499AC0064EB5F /* VodAdTrackingContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAB38D295499AC0064EB5F /* VodAdTrackingContentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00FCFD8D474D2EB3A56E746A /* Pods_SmartLib_iOS_Sample_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLib_iOS_Sample_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0789F67786949E91305EC955 /* Pods-SmartLib iOS Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.release.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.release.xcconfig"; sourceTree = "<group>"; };
-		144BC935A4A4CFE84EF1AA33 /* Pods-SmartLib iOS Sample App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.debug.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.debug.xcconfig"; sourceTree = "<group>"; };
+		3A4A5A8C81648EE254C5F6A8 /* Pods_SmartLib_iOS_Sample_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLib_iOS_Sample_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9B5B0A3238B53EECAC1AB1 /* Pods-SmartLib iOS Sample App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.debug.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.debug.xcconfig"; sourceTree = "<group>"; };
+		AAD92B651FE11D22BE9EE409 /* Pods-SmartLib iOS Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.release.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.release.xcconfig"; sourceTree = "<group>"; };
 		CE470A0C2949CB0A006843C7 /* SmartLib iOS Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartLib iOS Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE470A0F2949CB0A006843C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE470A102949CB0A006843C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +37,8 @@
 		CE470A212949CB0C006843C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE470A282949DC35006843C7 /* LiveContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveContentController.h; sourceTree = "<group>"; };
 		CE470A292949DC35006843C7 /* LiveContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveContentController.m; sourceTree = "<group>"; };
+		CEDAB38D295499AC0064EB5F /* VodAdTrackingContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VodAdTrackingContentController.m; sourceTree = "<group>"; };
+		CEDAB38E295499AC0064EB5F /* VodAdTrackingContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VodAdTrackingContentController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,28 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC56821EAD2BB3C7F122BB0C /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */,
+				5CE7BDADFA4545E830B58DA9 /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09CE60E4C17FB6772E1CABFD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				00FCFD8D474D2EB3A56E746A /* Pods_SmartLib_iOS_Sample_App.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		34F1C5748D85EB575A37DCA5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				144BC935A4A4CFE84EF1AA33 /* Pods-SmartLib iOS Sample App.debug.xcconfig */,
-				0789F67786949E91305EC955 /* Pods-SmartLib iOS Sample App.release.xcconfig */,
+				5B9B5B0A3238B53EECAC1AB1 /* Pods-SmartLib iOS Sample App.debug.xcconfig */,
+				AAD92B651FE11D22BE9EE409 /* Pods-SmartLib iOS Sample App.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A033C063535107A8F5C654CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A4A5A8C81648EE254C5F6A8 /* Pods_SmartLib_iOS_Sample_App.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE470A032949CB0A006843C7 = {
@@ -73,7 +76,7 @@
 				CE470A0E2949CB0A006843C7 /* SmartLib iOS Sample App */,
 				CE470A0D2949CB0A006843C7 /* Products */,
 				34F1C5748D85EB575A37DCA5 /* Pods */,
-				09CE60E4C17FB6772E1CABFD /* Frameworks */,
+				A033C063535107A8F5C654CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +99,8 @@
 				CE470A162949CB0A006843C7 /* ViewController.m */,
 				CE470A292949DC35006843C7 /* LiveContentController.m */,
 				CE470A282949DC35006843C7 /* LiveContentController.h */,
+				CEDAB38E295499AC0064EB5F /* VodAdTrackingContentController.h */,
+				CEDAB38D295499AC0064EB5F /* VodAdTrackingContentController.m */,
 				CE470A182949CB0A006843C7 /* Main.storyboard */,
 				CE470A1B2949CB0C006843C7 /* Assets.xcassets */,
 				CE470A1D2949CB0C006843C7 /* LaunchScreen.storyboard */,
@@ -112,11 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE470A252949CB0C006843C7 /* Build configuration list for PBXNativeTarget "SmartLib iOS Sample App" */;
 			buildPhases = (
-				D473C68683BE71401DCF0C10 /* [CP] Check Pods Manifest.lock */,
+				A7B40422D365B4E9A4EA2FA3 /* [CP] Check Pods Manifest.lock */,
 				CE470A082949CB0A006843C7 /* Sources */,
 				CE470A092949CB0A006843C7 /* Frameworks */,
 				CE470A0A2949CB0A006843C7 /* Resources */,
-				5ECBDD554F3AA4F3574C2A0B /* [CP] Embed Pods Frameworks */,
+				AD07CF058E6B575F72689C6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,24 +178,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5ECBDD554F3AA4F3574C2A0B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D473C68683BE71401DCF0C10 /* [CP] Check Pods Manifest.lock */ = {
+		A7B40422D365B4E9A4EA2FA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +200,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD07CF058E6B575F72689C6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -223,6 +228,7 @@
 				CE470A112949CB0A006843C7 /* AppDelegate.m in Sources */,
 				CE470A2B2949DCD9006843C7 /* LiveContentController.m in Sources */,
 				CE470A222949CB0C006843C7 /* main.m in Sources */,
+				CEDAB38F295499AC0064EB5F /* VodAdTrackingContentController.m in Sources */,
 				CE470A142949CB0A006843C7 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +367,7 @@
 		};
 		CE470A262949CB0C006843C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 144BC935A4A4CFE84EF1AA33 /* Pods-SmartLib iOS Sample App.debug.xcconfig */;
+			baseConfigurationReference = 5B9B5B0A3238B53EECAC1AB1 /* Pods-SmartLib iOS Sample App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -389,7 +395,7 @@
 		};
 		CE470A272949CB0C006843C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0789F67786949E91305EC955 /* Pods-SmartLib iOS Sample App.release.xcconfig */;
+			baseConfigurationReference = AAD92B651FE11D22BE9EE409 /* Pods-SmartLib iOS Sample App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
