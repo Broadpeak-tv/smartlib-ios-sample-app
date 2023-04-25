@@ -1,6 +1,6 @@
-# BPK SmartLib web sample app
+# BPK SmartLib iOS sample app
 
-This sample app shows how to implement a Broadpeak CDN integration with analytics and ad tracking using Shaka Player.
+This sample app shows how to implement a Broadpeak CDN integration with analytics and ad tracking using AVPlayer.
 
 Find all detailed steps on https://delivery-platform.broadpeak.tv/smartlib/
 
