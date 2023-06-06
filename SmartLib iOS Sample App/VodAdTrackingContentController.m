@@ -38,11 +38,13 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     [self.session attachPlayer:player];
     
     [self.session activateAdvertising];
+    [self.session setAdDataListener:self];
+    [self.session setAdEventsListener:self];
     
     // Run getURL in a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         // Start the session and retrieve the streaming URL
-        StreamingSessionResult *result = [self.session getURL:@"http://bpk67.broadpeak-vcdn.com:80/bpk-vod/vod20/output01/City/City/index.m3u8"];
+        StreamingSessionResult *result = [self.session getURL:@"https://stream.broadpeak.io/98dce83da57b03956f8ea3c5b949919a/scte35/bpk-tv/jumping/default/index.m3u8"];
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             if (![result isError]) {
@@ -106,6 +108,32 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
                                   context: context];
     }
     
+}
+
+- (void)onAdBreakBegin:(long)position duration:(long)duration totalNumber:(int)totalNumber {
+    NSLog(@"onAdBreakBegin %ld %ld %d", position, duration, totalNumber);
+}
+
+- (void)onAdBreakEnd {
+    NSLog(@"onAdBreakEnd");
+    
+}
+
+- (void)onAdSkippable:(long)offset limit:(long)limit {
+    NSLog(@"onAdSkippable %ld %ld", offset, limit);
+}
+
+- (void)onAdBegin:(long)position duration:(long) duration clickURL:(nonnull NSString *)clickURL sequenceNumber:(int)sequenceNumber totalNumber:(int)totalNumber {
+    NSLog(@"onAdBegin %ld %ld %@ %d %d", position, duration, clickURL, sequenceNumber, totalNumber);
+}
+
+
+- (void)onAdEnd {
+    NSLog(@"onAdEnd");
+}
+
+- (void)onAdData:(nonnull NSArray<AdBreakData *> *)adList {
+    NSLog(@"onAdData %@", adList);
 }
 
 @end
