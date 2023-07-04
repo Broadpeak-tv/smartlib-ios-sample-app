@@ -119,8 +119,8 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     
 }
 
-- (void)onAdSkippable:(long)offset limit:(long)limit {
-    NSLog(@"onAdSkippable %ld %ld", offset, limit);
+- (void)onAdSkippable:(long)adSkippablePosition adEndPosition:(long)adEndPosition adBreakEndPosition:(long)adBreakEndPosition {
+    NSLog(@"onAdSkippable %ld %ld %ld", adSkippablePosition, adEndPosition, adBreakEndPosition);
 }
 
 - (void)onAdBegin:(long)position duration:(long) duration clickURL:(nonnull NSString *)clickURL sequenceNumber:(int)sequenceNumber totalNumber:(int)totalNumber {
