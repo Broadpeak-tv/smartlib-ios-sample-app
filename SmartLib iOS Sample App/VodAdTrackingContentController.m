@@ -5,7 +5,7 @@
 //  Created by Pierre-Olivier on 14/12/2022.
 //
 
-@import SmartLib;
+// @import SmartLib;
 
 #import "VodAdTrackingContentController.h"
 
@@ -14,6 +14,9 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
 @interface VodAdTrackingContentController ()
 
 @property (nonatomic,strong) StreamingSession *session;
+
+@property (nonatomic,assign) long adEndPosition;
+@property (nonatomic,assign) long adBreakEndPosition;
 
 @end
 
@@ -110,30 +113,41 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     
 }
 
-- (void)onAdBreakBegin:(long)position duration:(long)duration totalNumber:(int)totalNumber {
-    NSLog(@"onAdBreakBegin %ld %ld %d", position, duration, totalNumber);
+- (void)onAdBreakBegin:(AdBreakData *)adBreak {
+    NSLog(@"onAdBreakBegin %ld %ld %d", adBreak.startPosition, adBreak.duration, adBreak.adCount);
 }
 
-- (void)onAdBreakEnd {
+- (void)onAdBreakEnd:(AdBreakData *)adBreakData {
     NSLog(@"onAdBreakEnd");
     
 }
 
-- (void)onAdSkippable:(long)adSkippablePosition adEndPosition:(long)adEndPosition adBreakEndPosition:(long)adBreakEndPosition {
+- (void)onAdBegin:(AdData *)adData adBreakData:(AdBreakData *)adBreakData {
+    NSLog(@"onAdBegin %ld %ld %@ %d %d", adData.startPosition, adData.duration, adData.clickURL, adData.index, adBreakData.adCount);
+}
+
+- (void)onAdSkippable:(AdData *)adData adBreakData:(AdBreakData *)adBreakData adSkippablePosition:(long)adSkippablePosition adEndPosition:(long)adEndPosition adBreakEndPosition:(long)adBreakEndPosition {
+    self.adEndPosition = adEndPosition;
+    self.adBreakEndPosition = adBreakEndPosition;
     NSLog(@"onAdSkippable %ld %ld %ld", adSkippablePosition, adEndPosition, adBreakEndPosition);
 }
 
-- (void)onAdBegin:(long)position duration:(long) duration clickURL:(nonnull NSString *)clickURL sequenceNumber:(int)sequenceNumber totalNumber:(int)totalNumber {
-    NSLog(@"onAdBegin %ld %ld %@ %d %d", position, duration, clickURL, sequenceNumber, totalNumber);
-}
-
-
-- (void)onAdEnd {
+- (void)onAdEnd:(AdData *)adData adBreakData:(AdBreakData *)adBreakData {
     NSLog(@"onAdEnd");
 }
 
 - (void)onAdData:(nonnull NSArray<AdBreakData *> *)adList {
     NSLog(@"onAdData %@", adList);
 }
+
+- (IBAction)onSkipAd:(id)sender {
+    [self.player seekToTime:CMTimeMakeWithSeconds(self.adEndPosition / 1000.f, 1)];
+}
+
+
+- (IBAction)onSkipAdBreak:(id)sender {
+    [self.player seekToTime:CMTimeMakeWithSeconds(self.adEndPosition / 1000.f, 1)];
+}
+
 
 @end

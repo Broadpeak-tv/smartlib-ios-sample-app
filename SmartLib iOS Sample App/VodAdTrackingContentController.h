@@ -9,7 +9,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
 
-@interface VodAdTrackingContentController : AVPlayerViewController
+#import "SmartLib.h"
+
+@interface VodAdTrackingContentController : AVPlayerViewController <AdEventsListener, AdDataListener>
 
 
 @end
