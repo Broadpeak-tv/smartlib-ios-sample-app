@@ -113,27 +113,27 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     
 }
 
-- (void)onAdBreakBegin:(AdBreakData *)adBreak {
-    NSLog(@"onAdBreakBegin %ld %ld %d", adBreak.startPosition, adBreak.duration, adBreak.adCount);
+- (void)onAdBreakBegin:(AdBreakData *)adBreakData {
+    NSLog(@"onAdBreakBegin %@ %ld %ld %d", adBreakData.adBreakId, adBreakData.startPosition, adBreakData.duration, adBreakData.adCount);
 }
 
 - (void)onAdBreakEnd:(AdBreakData *)adBreakData {
-    NSLog(@"onAdBreakEnd");
+    NSLog(@"onAdBreakEnd %@", adBreakData.adBreakId);
     
 }
 
 - (void)onAdBegin:(AdData *)adData adBreakData:(AdBreakData *)adBreakData {
-    NSLog(@"onAdBegin %ld %ld %@ %d %d", adData.startPosition, adData.duration, adData.clickURL, adData.index, adBreakData.adCount);
+    NSLog(@"onAdBegin %@ %ld %ld %@ %d %d", adData.adId, adData.startPosition, adData.duration, adData.clickURL, adData.index, adBreakData.adCount);
 }
 
 - (void)onAdSkippable:(AdData *)adData adBreakData:(AdBreakData *)adBreakData adSkippablePosition:(long)adSkippablePosition adEndPosition:(long)adEndPosition adBreakEndPosition:(long)adBreakEndPosition {
     self.adEndPosition = adEndPosition;
     self.adBreakEndPosition = adBreakEndPosition;
-    NSLog(@"onAdSkippable %ld %ld %ld", adSkippablePosition, adEndPosition, adBreakEndPosition);
+    NSLog(@"onAdSkippable %@ %ld %ld %ld", adData.adId, adSkippablePosition, adEndPosition, adBreakEndPosition);
 }
 
 - (void)onAdEnd:(AdData *)adData adBreakData:(AdBreakData *)adBreakData {
-    NSLog(@"onAdEnd");
+    NSLog(@"onAdEnd %@", adData.adId);
 }
 
 - (void)onAdData:(nonnull NSArray<AdBreakData *> *)adList {
