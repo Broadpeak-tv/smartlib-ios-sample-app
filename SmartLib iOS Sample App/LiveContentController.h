@@ -6,10 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import <AVKit/AVKit.h>
+#import <BitmovinPlayerCore/BitmovinPlayerCore.h>
 
-@interface LiveContentController : AVPlayerViewController
+@interface LiveContentController : UIViewController
 
 
 @end

@@ -9,10 +9,9 @@
 
 #import "LiveContentController.h"
 
-static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContext;
-
 @interface LiveContentController ()
 
+@property (nonatomic, strong) id<BMPPlayer> player;
 @property (nonatomic,strong) StreamingSession *session;
 
 @end
@@ -21,36 +20,42 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    // Create the player
-    AVPlayer *player = [AVPlayer playerWithPlayerItem:nil];
+    // Disable Bitmovin logging
+    BMPDebugConfig.logging.logger = nil;
+    
+    // Do any additional setup after loading the view.
+    BMPPlayerConfig *playerConfig = [BMPPlayerConfig new];
+    playerConfig.key = @"<your_license_here>";
+    self.player = [BMPPlayerFactory createWithPlayerConfig:playerConfig];
+    
+    // Create the player view and pass the player instance to it
+    BMPPlayerView *playerView = [[BMPPlayerView alloc] initWithPlayer:self.player frame:CGRectZero];
+    playerView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    playerView.frame = self.view.bounds;
+    
+    [self.view addSubview:playerView];
+    [self.view bringSubviewToFront:playerView];
     
     // Create SmartLib session
     self.session = [SmartLib createStreamingSession];
-    
     // Attach the player on the same thread
-    [self.session attachPlayer:player];
+    [self.session attachPlayer:self.player];
     
     // Run getURL in a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         // Start the session and retrieve the streaming URL
-        StreamingSessionResult *result = [self.session getURL:@"https://pf6.broadpeak-vcdn.com/bpk-tv/Arte/default/index.m3u8"];
-        
+        StreamingSessionResult *result = [self.session getURL:@"https://pf7.broadpeak-vcdn.com/bpk-tv/Arte/default/index.m3u8"];
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             if (![result isError]) {
-                // Prepare the player
-                [player replaceCurrentItemWithPlayerItem:[self playerItemFromURL:[result getURL]]];
-                self.player = player;
+                // Add source
+                NSURL *nsURL = [NSURL URLWithString:[result getURL]];
                 
-                [self.player.currentItem addObserver:self
-                                          forKeyPath:@"status"
-                                             options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
-                                             context:PlaybackStatusObservationContext];
-                
-                // Start the playback
+                BMPSourceConfig *sourceConfig = [[BMPSourceConfig alloc] initWithUrl:nsURL type: BMPSourceTypeHls];
+                [self.player loadSourceConfig:sourceConfig];
                 [self.player play];
             } else {
+                NSLog(@"Error: %@", [result getErrorMessage]);
                 // Stop the session if error
                 [self.session stopStreamingSession];
             }
@@ -58,47 +63,14 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     });
 }
 
-
 - (void)viewDidDisappear:(BOOL)animated {
     // Stop the session when closing the UI
     if (self.session != nil) {
         [self.player pause];
-        
-        [self.player.currentItem removeObserver:self
-                                     forKeyPath:@"status"];
-    
         [self.session stopStreamingSession];
-        [self.player replaceCurrentItemWithPlayerItem:nil];
     }
     
     [super viewDidDisappear:animated];
-}
-
-- (AVPlayerItem*)playerItemFromURL:(NSString *)url {
-    // Prepare asset.
-    AVURLAsset *assetUrl = [AVURLAsset assetWithURL: [NSURL URLWithString: url]];
-    AVPlayerItem *itemToPlay = [AVPlayerItem playerItemWithAsset: assetUrl];
-    
-    return itemToPlay;
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context {
-    // On non-recoverable error, stop the current session
-    if ([keyPath isEqualToString:@"status"]) {
-        AVPlayerItemStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
-        if (status == AVPlayerStatusFailed) {
-            [self.session stopStreamingSession];
-        }
-    } else {
-            [super observeValueForKeyPath: keyPath
-                                 ofObject: object
-                                   change: change
-                                  context: context];
-    }
-    
 }
 
 @end

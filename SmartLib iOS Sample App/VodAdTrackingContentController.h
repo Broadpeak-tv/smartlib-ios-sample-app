@@ -6,12 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import <AVKit/AVKit.h>
+#import <BitmovinPlayerCore/BitmovinPlayerCore.h>
 
 #import "SmartLib.h"
 
-@interface VodAdTrackingContentController : AVPlayerViewController <AdEventsListener, AdDataListener>
+@interface VodAdTrackingContentController : UIViewController <AdEventsListener, AdDataListener>
 
 
 @end

@@ -4,6 +4,8 @@ source 'https://delivery-platform.broadpeak.tv/ios/broadpeak/specs.git'
 target 'SmartLib iOS Sample App' do
     use_frameworks!
 
-    # iOS dependency
-    pod 'SmartLib-v3/AVPlayer', '05.01.02.63ff1e8'
+    # iOS dependencies
+    pod 'SmartLib-v3/Bitmovin', '05.01.04.68092e7'
+    
+    pod 'BitmovinPlayer', '3.85.2'
 end
