@@ -47,7 +47,7 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     // Run getURL in a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         // Start the session and retrieve the streaming URL
-        StreamingSessionResult *result = [self.session getURL:@"https://stream.broadpeak.io/98dce83da57b03956f8ea3c5b949919a/scte35/bpk-tv/jumping/default/index.m3u8"];
+        StreamingSessionResult *result = [self.session getURL:@"https://d3m98thyxwxtvo.cloudfront.net/9bf31c7ff062936a71193233516a9969/bpk-vod/voddemo/default/unity/adam/index.m3u8?category=adult"];
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             if (![result isError]) {
