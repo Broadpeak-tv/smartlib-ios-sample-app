@@ -21,7 +21,7 @@
     
     [SmartLib initSmartLib:@"http://analytics-players.broadpeak.tv/"
                nanoCDNHost:@""
-      broadpeakDomainNames:@"pf7.broadpeak-vcdn.com,d3m98thyxwxtvo.cloudfront.net"];
+      broadpeakDomainNames:@""];
 }
 
 

@@ -29,24 +29,29 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     // Create SmartLib session
     self.session = [SmartLib createStreamingSession];
     
+    
+    
     // Attach the player on the same thread
     [self.session attachPlayer:player];
+    
+
     
     // Run getURL in a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         // Start the session and retrieve the streaming URL
-        StreamingSessionResult *result = [self.session getURL:@"https://pf7.broadpeak-vcdn.com/bpk-tv/Arte/default/index.m3u8"];
+        StreamingSessionResult *result = [self.session getURL:@"https://pf7.broadpeak-vcdn.com/bpk-tv/tvr/default/index.m3u8"];
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             if (![result isError]) {
                 // Prepare the player
                 [player replaceCurrentItemWithPlayerItem:[self playerItemFromURL:[result getURL]]];
-                self.player = player;
                 
-                [self.player.currentItem addObserver:self
+                // Set the observer on the currentItem, not on the player
+                [player.currentItem addObserver:self
                                           forKeyPath:@"status"
                                              options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
                                              context:PlaybackStatusObservationContext];
+                self.player = player;
                 
                 // Start the playback
                 [self.player play];
@@ -88,7 +93,9 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
                        context:(void *)context {
     // On non-recoverable error, stop the current session
     if ([keyPath isEqualToString:@"status"]) {
+        
         AVPlayerItemStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
+        NSLog(@"MVA - STATUS CHANGED TO %ld", (long)status);
         if (status == AVPlayerStatusFailed) {
             [self.session stopStreamingSession];
         }
