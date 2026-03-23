@@ -29,12 +29,8 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
     // Create SmartLib session
     self.session = [SmartLib createStreamingSession];
     
-    
-    
     // Attach the player on the same thread
     [self.session attachPlayer:player];
-    
-
     
     // Run getURL in a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
@@ -93,9 +89,8 @@ static void *PlaybackStatusObservationContext = &PlaybackStatusObservationContex
                        context:(void *)context {
     // On non-recoverable error, stop the current session
     if ([keyPath isEqualToString:@"status"]) {
-        
         AVPlayerItemStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
-        NSLog(@"MVA - STATUS CHANGED TO %ld", (long)status);
+
         if (status == AVPlayerStatusFailed) {
             [self.session stopStreamingSession];
         }
