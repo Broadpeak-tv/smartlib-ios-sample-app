@@ -6,4 +6,5 @@ target 'SmartLib iOS Sample App' do
 
     # iOS dependency
     pod 'SmartLib-v3/AVPlayer', '06.00.03.861c04c'
+    pod 'SmartLib-v3/OMSDK', '06.00.03.861c04c'
 end

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1813D57A2FB75DDE00114ADD /* SmartLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5772FB75DDE00114ADD /* SmartLib.xcframework */; };
+		1813D57B2FB75DDE00114ADD /* SmartLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5772FB75DDE00114ADD /* SmartLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1813D57C2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5782FB75DDE00114ADD /* SmartLibAVPlayer.xcframework */; };
+		1813D57D2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5782FB75DDE00114ADD /* SmartLibAVPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1813D57E2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5792FB75DDE00114ADD /* SmartLibOMSDK.xcframework */; };
+		1813D57F2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5792FB75DDE00114ADD /* SmartLibOMSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1B9DA3B5428BAE0A5CE4CCD /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3098951D570F07689A3CE66 /* Pods_SmartLib_iOS_Sample_App.framework */; };
 		CE470A112949CB0A006843C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A102949CB0A006843C7 /* AppDelegate.m */; };
 		CE470A142949CB0A006843C7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A132949CB0A006843C7 /* SceneDelegate.m */; };
@@ -19,8 +25,27 @@
 		CEDAB38F295499AC0064EB5F /* VodAdTrackingContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAB38D295499AC0064EB5F /* VodAdTrackingContentController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1813D5802FB75DDE00114ADD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1813D57B2FB75DDE00114ADD /* SmartLib.xcframework in Embed Frameworks */,
+				1813D57D2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Embed Frameworks */,
+				1813D57F2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B7074A4B661AB0E0FF380DE /* Pods-SmartLib iOS Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.release.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.release.xcconfig"; sourceTree = "<group>"; };
+		1813D5772FB75DDE00114ADD /* SmartLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SmartLib.xcframework; path = "Pods/SmartLib-v3/Pod/SmartLib.xcframework"; sourceTree = "<group>"; };
+		1813D5782FB75DDE00114ADD /* SmartLibAVPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SmartLibAVPlayer.xcframework; path = "Pods/SmartLib-v3/Pod/avplayer/SmartLibAVPlayer.xcframework"; sourceTree = "<group>"; };
+		1813D5792FB75DDE00114ADD /* SmartLibOMSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SmartLibOMSDK.xcframework; path = "Pods/SmartLib-v3/Pod/omsdk/SmartLibOMSDK.xcframework"; sourceTree = "<group>"; };
 		5D73165A4DB357CD97AB276D /* Pods-SmartLib iOS Sample App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.debug.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.debug.xcconfig"; sourceTree = "<group>"; };
 		A3098951D570F07689A3CE66 /* Pods_SmartLib_iOS_Sample_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLib_iOS_Sample_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE470A0C2949CB0A006843C7 /* SmartLib iOS Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartLib iOS Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1813D57E2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Frameworks */,
 				B1B9DA3B5428BAE0A5CE4CCD /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */,
+				1813D57C2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Frameworks */,
+				1813D57A2FB75DDE00114ADD /* SmartLib.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +133,9 @@
 		F23D550BC462BB4C34080239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1813D5772FB75DDE00114ADD /* SmartLib.xcframework */,
+				1813D5782FB75DDE00114ADD /* SmartLibAVPlayer.xcframework */,
+				1813D5792FB75DDE00114ADD /* SmartLibOMSDK.xcframework */,
 				A3098951D570F07689A3CE66 /* Pods_SmartLib_iOS_Sample_App.framework */,
 			);
 			name = Frameworks;
@@ -121,7 +152,7 @@
 				CE470A082949CB0A006843C7 /* Sources */,
 				CE470A092949CB0A006843C7 /* Frameworks */,
 				CE470A0A2949CB0A006843C7 /* Resources */,
-				14CE36F28598E70C4A2DE1F8 /* [CP] Embed Pods Frameworks */,
+				1813D5802FB75DDE00114ADD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,23 +209,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14CE36F28598E70C4A2DE1F8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9061613FBA159A330C45D1F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
