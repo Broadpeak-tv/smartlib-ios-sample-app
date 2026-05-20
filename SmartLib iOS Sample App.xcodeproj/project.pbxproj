@@ -153,6 +153,7 @@
 				CE470A092949CB0A006843C7 /* Frameworks */,
 				CE470A0A2949CB0A006843C7 /* Resources */,
 				1813D5802FB75DDE00114ADD /* Embed Frameworks */,
+				1864CCF42FBDA28D00CDD859 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -209,6 +210,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1864CCF42FBDA28D00CDD859 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -euo pipefail\n\nAPP_FRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nSMARTLIB_OMSDK_FRAMEWORK=\"${APP_FRAMEWORKS_DIR}/SmartLibOMSDK.framework\"\nNESTED_OMSDK_FRAMEWORK=\"${SMARTLIB_OMSDK_FRAMEWORK}/Frameworks/OMSDK_Broadpeaktv.framework\"\n\nif [ ! -d \"${SMARTLIB_OMSDK_FRAMEWORK}\" ]; then\n  echo \"warning: SmartLibOMSDK.framework not found at ${SMARTLIB_OMSDK_FRAMEWORK}\"\n  exit 0\nfi\n\nif [ ! -d \"${NESTED_OMSDK_FRAMEWORK}\" ]; then\n  echo \"warning: Nested OMSDK_Broadpeaktv.framework not found at ${NESTED_OMSDK_FRAMEWORK}\"\n  exit 0\nfi\n\nif [ -z \"${EXPANDED_CODE_SIGN_IDENTITY:-}\" ] || [ \"${CODE_SIGNING_ALLOWED:-NO}\" = \"NO\" ]; then\n  echo \"warning: Code signing identity not available, skipping re-sign\"\n  exit 0\nfi\n\necho \"Re-signing nested OMSDK framework\"\n/usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${OTHER_CODE_SIGN_FLAGS:-} --preserve-metadata=identifier,entitlements \"${NESTED_OMSDK_FRAMEWORK}\"\n\necho \"Re-signing SmartLibOMSDK framework\"\n/usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${OTHER_CODE_SIGN_FLAGS:-} --preserve-metadata=identifier,entitlements \"${SMARTLIB_OMSDK_FRAMEWORK}\"\n";
+		};
 		9061613FBA159A330C45D1F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
