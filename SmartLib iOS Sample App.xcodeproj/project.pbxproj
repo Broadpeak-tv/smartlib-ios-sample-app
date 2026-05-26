@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1813D57A2FB75DDE00114ADD /* SmartLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5772FB75DDE00114ADD /* SmartLib.xcframework */; };
-		1813D57B2FB75DDE00114ADD /* SmartLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5772FB75DDE00114ADD /* SmartLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1813D57C2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5782FB75DDE00114ADD /* SmartLibAVPlayer.xcframework */; };
-		1813D57D2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5782FB75DDE00114ADD /* SmartLibAVPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1813D57E2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5792FB75DDE00114ADD /* SmartLibOMSDK.xcframework */; };
-		1813D57F2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1813D5792FB75DDE00114ADD /* SmartLibOMSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1B9DA3B5428BAE0A5CE4CCD /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3098951D570F07689A3CE66 /* Pods_SmartLib_iOS_Sample_App.framework */; };
 		CE470A112949CB0A006843C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A102949CB0A006843C7 /* AppDelegate.m */; };
 		CE470A142949CB0A006843C7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A132949CB0A006843C7 /* SceneDelegate.m */; };
@@ -24,22 +18,6 @@
 		CE470A2B2949DCD9006843C7 /* LiveContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE470A292949DC35006843C7 /* LiveContentController.m */; };
 		CEDAB38F295499AC0064EB5F /* VodAdTrackingContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAB38D295499AC0064EB5F /* VodAdTrackingContentController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		1813D5802FB75DDE00114ADD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1813D57B2FB75DDE00114ADD /* SmartLib.xcframework in Embed Frameworks */,
-				1813D57D2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Embed Frameworks */,
-				1813D57F2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B7074A4B661AB0E0FF380DE /* Pods-SmartLib iOS Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLib iOS Sample App.release.xcconfig"; path = "Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,10 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1813D57E2FB75DDE00114ADD /* SmartLibOMSDK.xcframework in Frameworks */,
 				B1B9DA3B5428BAE0A5CE4CCD /* Pods_SmartLib_iOS_Sample_App.framework in Frameworks */,
-				1813D57C2FB75DDE00114ADD /* SmartLibAVPlayer.xcframework in Frameworks */,
-				1813D57A2FB75DDE00114ADD /* SmartLib.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +127,7 @@
 				CE470A082949CB0A006843C7 /* Sources */,
 				CE470A092949CB0A006843C7 /* Frameworks */,
 				CE470A0A2949CB0A006843C7 /* Resources */,
-				1813D5802FB75DDE00114ADD /* Embed Frameworks */,
-				1864CCF42FBDA28D00CDD859 /* ShellScript */,
+				E3C14748EF14328FBBBD4860 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,23 +184,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1864CCF42FBDA28D00CDD859 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -euo pipefail\n\nAPP_FRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nSMARTLIB_OMSDK_FRAMEWORK=\"${APP_FRAMEWORKS_DIR}/SmartLibOMSDK.framework\"\nNESTED_OMSDK_FRAMEWORK=\"${SMARTLIB_OMSDK_FRAMEWORK}/Frameworks/OMSDK_Broadpeaktv.framework\"\n\nif [ ! -d \"${SMARTLIB_OMSDK_FRAMEWORK}\" ]; then\n  echo \"warning: SmartLibOMSDK.framework not found at ${SMARTLIB_OMSDK_FRAMEWORK}\"\n  exit 0\nfi\n\nif [ ! -d \"${NESTED_OMSDK_FRAMEWORK}\" ]; then\n  echo \"warning: Nested OMSDK_Broadpeaktv.framework not found at ${NESTED_OMSDK_FRAMEWORK}\"\n  exit 0\nfi\n\nif [ -z \"${EXPANDED_CODE_SIGN_IDENTITY:-}\" ] || [ \"${CODE_SIGNING_ALLOWED:-NO}\" = \"NO\" ]; then\n  echo \"warning: Code signing identity not available, skipping re-sign\"\n  exit 0\nfi\n\necho \"Re-signing nested OMSDK framework\"\n/usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${OTHER_CODE_SIGN_FLAGS:-} --preserve-metadata=identifier,entitlements \"${NESTED_OMSDK_FRAMEWORK}\"\n\necho \"Re-signing SmartLibOMSDK framework\"\n/usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${OTHER_CODE_SIGN_FLAGS:-} --preserve-metadata=identifier,entitlements \"${SMARTLIB_OMSDK_FRAMEWORK}\"\n";
-		};
 		9061613FBA159A330C45D1F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +204,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3C14748EF14328FBBBD4860 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartLib iOS Sample App/Pods-SmartLib iOS Sample App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
