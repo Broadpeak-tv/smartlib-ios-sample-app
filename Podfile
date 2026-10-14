@@ -5,5 +5,5 @@ target 'SmartLib iOS Sample App' do
     use_frameworks!
 
     # iOS dependency
-    pod 'SmartLib-v3/AVPlayer', '06.01.05.91735e0'
+    pod 'SmartLib-v3/AVPlayer', '06.02.01.947fc0e'
 end
